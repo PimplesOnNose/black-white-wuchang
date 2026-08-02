@@ -1,0 +1,41 @@
+/* ═══════════════════════════════════════════
+   INK DESIGN SYSTEM — Animations
+   墨韵设计系统 · 动画
+   ═══════════════════════════════════════════ */
+
+@keyframes ink-fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ink-fade-in-up { animation: ink-fade-in-up 0.8s ease forwards; }
+.ink-fade-in-up--d1 { animation: ink-fade-in-up 0.8s 0.15s ease forwards; opacity: 0; }
+
+@keyframes ink-scroll-pulse {
+  0%, 100% { transform: scaleY(0.3); opacity: 0.4; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes ink-stripe {
+  to { background-position: 8px 0; }
+}
+
+/* ─── Scroll Reveal ─── */
+.ink-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.ink-reveal.revealed,
+.ink-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  .ink-reveal { opacity: 1; transform: none; }
+  .ink-hero__scroll::after { animation: none; }
+  .ink-progress__bar--striped .ink-progress__fill { animation: none; }
+}

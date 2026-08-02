@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="ink-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黑白无常 · The Impermanence</title>
+  <meta name="description" content="A bilingual Chinese folktale of two sworn brothers who became the guardians between life and death.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ink/ink.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="ink-body">
+
+  <!-- Sticky top bar -->
+  <header class="ink-nav bww-nav">
+    <div class="ink-nav__inner">
+      <a href="#" class="ink-nav__logo bww-logo" data-action="restart" aria-label="Restart">
+        <div class="ink-seal ink-seal--sm bww-logo__seal">墨</div>
+        <div class="ink-nav__logo-text">
+          <span class="bww-logo__zh">黑白无常</span>
+          <small class="bww-logo__en">IMPERMANENCE</small>
+        </div>
+      </a>
+
+      <div class="bww-nav__right">
+        <!-- Language toggle -->
+        <div class="bww-lang-toggle" role="group" aria-label="Language">
+          <button class="bww-lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="bww-lang-btn" data-lang="zh" aria-pressed="false">中</button>
+        </div>
+        <div class="ink-nav__actions">
+          <!-- Autoplay -->
+          <button class="bww-autoplay-btn" id="bwwAutoplay" aria-pressed="false"
+                  aria-label="Toggle autoplay">
+            <span class="bww-autoplay-icon" aria-hidden="true">◐</span>
+            <span class="bww-autoplay-label" data-i18n="autoplay">Autoplay</span>
+          </button>
+          <!-- Theme toggle (from ink-design) -->
+          <button class="ink-theme-toggle" id="inkThemeToggle" aria-label="Toggle theme">
+            <span class="ink-theme-toggle__sun">☀</span>
+            <span class="ink-theme-toggle__moon">☾</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Progress ribbon -->
+  <div class="bww-progress" aria-hidden="true">
+    <div class="bww-progress__fill" id="bwwProgressFill" style="width:0"></div>
+  </div>
+
+  <!-- Story viewport -->
+  <main class="bww-stage" id="bwwStage" aria-live="polite">
+    <!-- pages injected by app.js -->
+  </main>
+
+  <!-- Bottom control bar -->
+  <footer class="bww-controls" aria-label="Story controls">
+    <button class="ink-btn ink-btn--sm" id="bwwPrev" aria-label="Previous page">⏮ <span data-i18n="prev">Prev</span></button>
+    <button class="ink-btn ink-btn--primary bww-play-btn" id="bwwPlay" aria-label="Play narration">
+      <span class="bww-play-icon" aria-hidden="true">▶</span>
+    </button>
+    <span class="bww-page-marker"><span id="bwwCurNum">1</span> / <span id="bwwTotalNum">12</span></span>
+    <button class="ink-btn ink-btn--sm" id="bwwNext" aria-label="Next page"><span data-i18n="next">Next</span> ⏭</button>
+  </footer>
+
+  <!-- Audio (single, reused) -->
+  <audio id="bwwAudio" class="bww-audio" preload="auto"></audio>
+
+  <script src="ink/ink.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

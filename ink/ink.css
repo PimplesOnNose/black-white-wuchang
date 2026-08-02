@@ -1,0 +1,9 @@
+/* ═══════════════════════════════════════════
+   INK DESIGN SYSTEM — Main Entry Point
+   墨韵设计系统 · 入口
+   ═══════════════════════════════════════════ */
+
+@import url('variables.css');
+@import url('base.css');
+@import url('components.css');
+@import url('animations.css');

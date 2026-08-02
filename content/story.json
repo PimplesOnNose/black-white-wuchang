@@ -1,0 +1,233 @@
+{
+  "meta": {
+    "title_en": "The Impermanence",
+    "title_zh": "黑白无常",
+    "title_pinyin": "Hēi Bái Wú Cháng",
+    "subtitle_en": "A Chinese folktale of two brothers who became the guardians between life and death",
+    "subtitle_zh": "两位结义兄弟化为阴阳使者的民间传说",
+    "subtitle_pinyin": "Liǎng wèi jié yì xiōng dì huà wéi yīn yáng shǐ zhě de mín jiān chuán shuō",
+    "duration_minutes": 10
+  },
+  "pages": [
+    {
+      "id": "00",
+      "slug": "landing",
+      "image": "images/00-landing.png",
+      "audio": {
+        "en": "audio/en/00.mp3",
+        "zh": "audio/zh/00.mp3"
+      },
+      "section_numeral": "",
+      "section_label_en": "",
+      "section_label_zh": "",
+      "title_en": "The Impermanence",
+      "title_zh": "黑白无常",
+      "title_pinyin": "Hēi Bái Wú Cháng",
+      "body_en": "All things flow. All things end. This is the tale the Chinese tell about two brothers who kept their word beyond death — and became the guardians between the world of the living and the world of the dead. Press begin, and listen.",
+      "body_zh": "万事万物，皆在流动；万事万物，皆有尽时。这是一个中国人讲了千百年的故事——一对兄弟信守承诺，直至死后，化身阴阳两界之间的守护者。按下开始，请听。",
+      "body_pinyin": "wàn shì wàn wù ， jiē zài liú dòng ； wàn shì wàn wù ， jiē yǒu jǐn shí 。 zhè shì yí gè zhōng guó rén jiǎng le qiān bǎi nián de gù shì —— yī duì xiōng dì xìn shǒu chéng nuò ， zhí zhì sǐ hòu ， huà shēn yīn yáng liǎng jiè zhī jiān de shǒu hù zhě 。 àn xià kāi shǐ ， qǐng tīng 。",
+      "alt_en": "The Impermanence",
+      "alt_zh": "黑白无常"
+    },
+    {
+      "id": "01",
+      "slug": "underworld",
+      "image": "images/01-underworld.png",
+      "audio": {
+        "en": "audio/en/01.mp3",
+        "zh": "audio/zh/01.mp3"
+      },
+      "section_numeral": "壹",
+      "section_label_en": "Chapter One",
+      "section_label_zh": "第一章",
+      "title_en": "Before There Were Ghosts",
+      "title_zh": "在鬼魂出现之前",
+      "title_pinyin": "Zài Guǐ Hún Chū Xiàn Zhī Qián",
+      "body_en": "In the old Chinese imagination, death was not an ending but a transfer. The dead walked a long road through the underworld — past the courts of Yanluo the King, the City God, and the judges who weighed every life like merchants weighing silver. Every soul needed an escort. And every escort had a story of their own.",
+      "body_zh": "在古人的想象里，死亡不是结束，而是转场。逝者要走过一条长长的路，穿过阎罗王的殿堂、城隍的衙门，和判官的案前——判官掂量每一生的分量，如同商人称量白银。每个魂魄都需要引路的人。而每一个引路者，都有属于他们自己的故事。",
+      "body_pinyin": "zài gǔ rén de xiǎng xiàng lǐ ， sǐ wáng bú shì jié shù ， ér shì zhuǎn chǎng 。 shì zhě yào zǒu guò yī tiáo cháng cháng de lù ， chuān guò yán luó wáng de diàn táng 、 chéng huáng de yá mén ， hé pàn guān de àn qián —— pàn guān diān liáng měi yī shēng de fèn liàng ， rú tóng shāng rén chēng liàng bái yín 。 měi gè hún pò dōu xū yào yǐn lù de rén 。 ér měi yí gè yǐn lù zhě ， dōu yǒu shǔ yú tā men zì jǐ de gù shì 。",
+      "alt_en": "Before There Were Ghosts",
+      "alt_zh": "在鬼魂出现之前"
+    },
+    {
+      "id": "02",
+      "slug": "brothers",
+      "image": "images/02-brothers.png",
+      "audio": {
+        "en": "audio/en/02.mp3",
+        "zh": "audio/zh/02.mp3"
+      },
+      "section_numeral": "贰",
+      "section_label_en": "Chapter Two",
+      "section_label_zh": "第二章",
+      "title_en": "Two Sworn Brothers",
+      "title_zh": "结义兄弟",
+      "title_pinyin": "Jié Yì Xiōng Dì",
+      "body_en": "Once, long ago, there lived two sworn brothers. The first, Xie Bian, was tall and gentle, patient as still water. The second, Fan Wujiu, was short and hot-tempered, loyal as iron. They had grown up together, shared every meal and every danger, and sworn never to let each other down.",
+      "body_zh": "很久很久以前，有一对结义兄弟。哥哥谢必安，身材高大，性情温和，像一潭静水；弟弟范无救，个子矮小，脾气火爆，却忠心似铁。两人从小一起长大，同吃同住，同历艰险，立誓永不相负。",
+      "body_pinyin": "hěn jiǔ hěn jiǔ yǐ qián ， yǒu yī duì jié yì xiōng dì 。 gē gē xiè bì ān ， shēn cái gāo dà ， xìng qíng wēn hé ， xiàng yī tán jìng shuǐ ； dì di fàn wú jiù ， gè zi ǎi xiǎo ， pí qì huǒ bào ， què zhōng xīn shì tiě 。 liǎng rén cóng xiǎo yì qǐ zhǎng dà ， tóng chī tóng zhù ， tóng lì jiān xiǎn ， lì shì yǒng bù xiāng fù 。",
+      "alt_en": "Two Sworn Brothers",
+      "alt_zh": "结义兄弟"
+    },
+    {
+      "id": "03",
+      "slug": "bridge",
+      "image": "images/03-bridge.png",
+      "audio": {
+        "en": "audio/en/03.mp3",
+        "zh": "audio/zh/03.mp3"
+      },
+      "section_numeral": "叁",
+      "section_label_en": "Chapter Three",
+      "section_label_zh": "第三章",
+      "title_en": "The Bridge at Nantai",
+      "title_zh": "南台桥之约",
+      "title_pinyin": "Nán Tái Qiáo Zhī Yuē",
+      "body_en": "One summer day, they came to the Nantai Bridge. Dark clouds gathered; rain was coming. “Wait here, brother,” said Xie Bian. “I will fetch an umbrella.” Fan Wujiu nodded and sat beneath the bridge to wait, as they had agreed. It was a small promise. But some promises are small only until they are tested.",
+      "body_zh": "那年夏天，两人走到南台桥边。乌云压顶，眼看就要下雨。谢必安说：“弟弟，你在此等候，我回家取伞。”范无救点点头，坐在桥下等着，如同他们约定好的那样。这只是一个很小的约定。可有些约定，在经受考验之前，永远不知道它有多大。",
+      "body_pinyin": "nà nián xià tiān ， liǎng rén zǒu dào nán tái qiáo biān 。 wū yún yā dǐng ， yǎn kàn jiù yào xià yǔ 。 xiè bì ān shuō ：“ dì di ， nǐ zài cǐ děng hòu ， wǒ huí jiā qǔ sǎn 。” fàn wú jiù diǎn diǎn tóu ， zuò zài qiáo xià děng zhe ， rú tóng tā men yuē dìng hǎo de nà yàng 。 zhè zhǐ shì yí gè hěn xiǎo de yuē dìng 。 kě yǒu xiē yuē dìng ， zài jīng shòu kǎo yàn zhī qián ， yǒng yuǎn bù zhī dào tā yǒu duō dà 。",
+      "alt_en": "The Bridge at Nantai",
+      "alt_zh": "南台桥之约"
+    },
+    {
+      "id": "04",
+      "slug": "river",
+      "image": "images/04-river.png",
+      "audio": {
+        "en": "audio/en/04.mp3",
+        "zh": "audio/zh/04.mp3"
+      },
+      "section_numeral": "肆",
+      "section_label_en": "Chapter Four",
+      "section_label_zh": "第四章",
+      "title_en": "The Raging River",
+      "title_zh": "暴雨滔天",
+      "title_pinyin": "Bào Yǔ Tāo Tiān",
+      "body_en": "The rain came down like the sky had split open. The river swelled, roaring over its banks. Water rose around Fan Wujiu — to his knees, his waist, his chest. He could have climbed to safety. He could have broken his word. Instead he held to the bridge pillar, and held to his promise, until the river took him.",
+      "body_zh": "大雨倾盆，仿佛天被撕开了口子。河水暴涨，咆哮着漫过堤岸。水淹过范无救的膝盖、腰身、胸口。他本可以爬上岸去，本可以失约一次。但他抱着桥柱，抱着那句承诺，直到河水将他吞没。",
+      "body_pinyin": "dà yǔ qīng pén ， fǎng fú tiān bèi sī kāi le kǒu zi 。 hé shuǐ bào zhǎng ， páo xiāo zhe màn guò dī àn 。 shuǐ yān guò fàn wú jiù de xī gài 、 yāo shēn 、 xiōng kǒu 。 tā běn kě yǐ pá shàng àn qù ， běn kě yǐ shī yuē yī cì 。 dàn tā bào zhe qiáo zhù ， bào zhe nà jù chéng nuò ， zhí dào hé shuǐ jiāng tā tūn mò 。",
+      "alt_en": "The Raging River",
+      "alt_zh": "暴雨滔天"
+    },
+    {
+      "id": "05",
+      "slug": "hanging",
+      "image": "images/05-hanging.png",
+      "audio": {
+        "en": "audio/en/05.mp3",
+        "zh": "audio/zh/05.mp3"
+      },
+      "section_numeral": "伍",
+      "section_label_en": "Chapter Five",
+      "section_label_zh": "第五章",
+      "title_en": "The Tongue of Grief",
+      "title_zh": "悲伤的长舌",
+      "title_pinyin": "Bēi Shāng De Cháng Shé",
+      "body_en": "When Xie Bian returned with the umbrella, he found only the flood. His brother was gone. The tall man who had never raised his voice now wept like a child. Unable to bear a world without his brother, he hanged himself from the bridge. That is why, to this day, the White Impermanence is shown with a long tongue — the mark of a man who died of sorrow.",
+      "body_zh": "谢必安拿着伞赶回来时，只见滔滔洪水，弟弟已不见踪影。这个从不高声说话的巨人，哭得像个孩子。他无法忍受没有弟弟的世界，于是在桥头自缢身亡。所以直到今天，白无常的形象总是吐着长长的舌头——那是悲伤至死的印记。",
+      "body_pinyin": "xiè bì ān ná zhe sǎn gǎn huí lái shí ， zhǐ jiàn tāo tāo hóng shuǐ ， dì di yǐ bú jiàn zōng yǐng 。 zhè ge cóng bù gāo shēng shuō huà de jù rén ， kū dé xiàng gè hái zi 。 tā wú fǎ rěn shòu méi yǒu dì di de shì jiè ， yú shì zài qiáo tóu zì yì shēn wáng 。 suǒ yǐ zhí dào jīn tiān ， bái wú cháng de xíng xiàng zǒng shì tǔ zhe cháng cháng de shé tou —— nà shì bēi shāng zhì sǐ de yìn jì 。",
+      "alt_en": "The Tongue of Grief",
+      "alt_zh": "悲伤的长舌"
+    },
+    {
+      "id": "06",
+      "slug": "jade-emperor",
+      "image": "images/06-jade-emperor.png",
+      "audio": {
+        "en": "audio/en/06.mp3",
+        "zh": "audio/zh/06.mp3"
+      },
+      "section_numeral": "陆",
+      "section_label_en": "Chapter Six",
+      "section_label_zh": "第六章",
+      "title_en": "Before the Jade Emperor",
+      "title_zh": "玉帝敕封",
+      "title_pinyin": "Yù Dì Chì Fēng",
+      "body_en": "The two brothers met again in the world of spirits. The Jade Emperor, who rules the heavens, heard their story. Moved by their faith and brotherhood, he did not send them to be reborn. Instead he appointed them officers of the underworld — Xie Bian in white, Fan Wujiu in black — to guide the souls of the dead and keep order between the worlds.",
+      "body_zh": "两个兄弟在幽冥之中重逢。天庭的玉皇大帝听说了他们的故事，为他们的信义与情义所感动。他没有让他们转世投胎，而是册封他们为地府的官差——谢必安白衣，范无救黑衣——负责接引亡魂，维持阴阳两界的秩序。",
+      "body_pinyin": "liǎng gè xiōng dì zài yōu míng zhī zhōng chóng féng 。 tiān tíng de yù huáng dà dì tīng shuō le tā men de gù shì ， wèi tā men de xìn yì yǔ qíng yì suǒ gǎn dòng 。 tā méi yǒu ràng tā men zhuǎn shì tóu tāi ， ér shì cè fēng tā men wèi dì fǔ de guān chāi —— xiè bì ān bái yī ， fàn wú jiù hēi yī —— fù zé jiē yǐn wáng hún ， wéi chí yīn yáng liǎng jiè de zhì xù 。",
+      "alt_en": "Before the Jade Emperor",
+      "alt_zh": "玉帝敕封"
+    },
+    {
+      "id": "07",
+      "slug": "yin-yang",
+      "image": "images/07-yin-yang.png",
+      "audio": {
+        "en": "audio/en/07.mp3",
+        "zh": "audio/zh/07.mp3"
+      },
+      "section_numeral": "柒",
+      "section_label_en": "Chapter Seven",
+      "section_label_zh": "第七章",
+      "title_en": "Black and White, Yin and Yang",
+      "title_zh": "黑白阴阳",
+      "title_pinyin": "Hēi Bái Yīn Yáng",
+      "body_en": "Why black and white? In Chinese thought, the world turns on two forces: yin and yang — dark and light, night and day, death and life. The two brothers became the living symbol of that balance. White Xie Bian's hat reads “Meet Me and Find Fortune.” Black Fan Wujiu's hat reads “Peace Under Heaven.” One offers mercy; the other enforces justice.",
+      "body_zh": "为什么是黑与白？在中国人的观念里，万物都由阴阳两股力量运转——暗与明，夜与昼，死与生。两位兄弟成了这种平衡的化身。白无常谢必安的高帽上写着“一见生财”，黑无常范无救的帽上写着“天下太平”。一个带来宽仁，一个维护公正。",
+      "body_pinyin": "wèi shén me shì hēi yǔ bái ？ zài zhōng guó rén de guān niàn lǐ ， wàn wù dōu yóu yīn yáng liǎng gǔ lì liàng yùn zhuàn —— àn yǔ míng ， yè yǔ zhòu ， sǐ yǔ shēng 。 liǎng wèi xiōng dì chéng le zhè zhǒng píng héng de huà shēn 。 bái wú cháng xiè bì ān de gāo mào shàng xiě zhe “ yī jiàn shēng cái ”， hēi wú cháng fàn wú jiù de mào shàng xiě zhe “ tiān xià tài píng ”。 yí gè dài lái kuān rén ， yí gè wéi hù gōng zhèng 。",
+      "alt_en": "Black and White, Yin and Yang",
+      "alt_zh": "黑白阴阳"
+    },
+    {
+      "id": "08",
+      "slug": "procession",
+      "image": "images/08-procession.png",
+      "audio": {
+        "en": "audio/en/08.mp3",
+        "zh": "audio/zh/08.mp3"
+      },
+      "section_numeral": "捌",
+      "section_label_en": "Chapter Eight",
+      "section_label_zh": "第八章",
+      "title_en": "What They Still Do",
+      "title_zh": "至今仍在",
+      "title_pinyin": "Zhì Jīn Réng Zài",
+      "body_en": "Even today, their images stand on either side of the City God in temples across China and Taiwan — one tall and white, one short and black. During temple festivals, huge puppet figures of the Seventh and Eighth Lords lead processions through the streets, towering over the crowd. People say that to meet them is a warning: keep your word, do no wrong.",
+      "body_zh": "直到今天，中国和台湾的城隍庙里，他们的神像仍分立两旁——一位高而白，一位矮而黑。庙会游行时，巨大的七爷八爷神将走在队伍最前面，高过人群，穿街而过。人们说，见到他们是一种提醒：守信重诺，莫作恶事。",
+      "body_pinyin": "zhí dào jīn tiān ， zhōng guó hé tái wān de chéng huáng miào lǐ ， tā men de shén xiàng réng fēn lì liǎng páng —— yī wèi gāo ér bái ， yī wèi ǎi ér hēi 。 miào huì yóu xíng shí ， jù dà de qī yé bā yé shén jiāng zǒu zài duì wǔ zuì qián miàn ， gāo guò rén qún ， chuān jiē ér guò 。 rén men shuō ， jiàn dào tā men shì yī zhǒng tí xǐng ： shǒu xìn zhòng nuò ， mò zuò è shì 。",
+      "alt_en": "What They Still Do",
+      "alt_zh": "至今仍在"
+    },
+    {
+      "id": "09",
+      "slug": "names",
+      "image": "images/09-names.png",
+      "audio": {
+        "en": "audio/en/09.mp3",
+        "zh": "audio/zh/09.mp3"
+      },
+      "section_numeral": "玖",
+      "section_label_en": "Chapter Nine",
+      "section_label_zh": "第九章",
+      "title_en": "A Note on Names",
+      "title_zh": "名字之道",
+      "title_pinyin": "Míng Zì Zhī Dào",
+      "body_en": "Their names carry the whole lesson. Xie Bian — “repent, and you will find peace.” Fan Wujiu — “the wicked are beyond rescue.” Some say the names are a promise: those who repent can still be saved, while those who refuse to change will find no one to save them. The brothers who kept their word became the guardians of the promise that goodness is rewarded.",
+      "body_zh": "他们的名字里藏着全部的教诲。谢必安——“谢罪悔过，必得平安”；范无救——“作恶之人，必定无救”。有人说，这两个名字是一种许诺：肯回头的人仍有救，不肯改过的人终将无人能救。那对守住约定的兄弟，成了“善有善报”这句话的守护者。",
+      "body_pinyin": "tā men de míng zì lǐ cáng zhe quán bù de jiào huì 。 xiè bì ān ——“ xiè zuì huǐ guò ， bì děi píng ān ”； fàn wú jiù ——“ zuò è zhī rén ， bì dìng wú jiù ”。 yǒu rén shuō ， zhè liǎng gè míng zì shì yī zhǒng xǔ nuò ： kěn huí tóu de rén réng yǒu jiù ， bù kěn gǎi guò de rén zhōng jiāng wú rén néng jiù 。 nà duì shǒu zhù yuē dìng de xiōng dì ， chéng le “ shàn yǒu shàn bào ” zhè jù huà de shǒu hù zhě 。",
+      "alt_en": "A Note on Names",
+      "alt_zh": "名字之道"
+    },
+    {
+      "id": "10",
+      "slug": "epilogue",
+      "image": "images/10-epilogue.png",
+      "audio": {
+        "en": "audio/en/10.mp3",
+        "zh": "audio/zh/10.mp3"
+      },
+      "section_numeral": "",
+      "section_label_en": "",
+      "section_label_zh": "",
+      "title_en": "Impermanence",
+      "title_zh": "无常",
+      "title_pinyin": "Wú Cháng",
+      "body_en": "The tale of the Black and White Impermanence is not really about ghosts. It is about impermanence — the Chinese word wuchang — the truth that all things change, and all things end. The brothers remind us that in a world of constant change, some things can still hold: a promise, a friendship, a choice to do right. Keep your word. And when the river rises, hold to the pillar.",
+      "body_zh": "黑白无常的故事，说的其实不是鬼。它说的是“无常”——万物皆变，终有尽时。两位兄弟提醒我们：在这个不断变化的世界里，有些东西仍然可以坚守——一句承诺、一份情义、一次向善的选择。守好你的承诺。当河水上涨时，抱紧那根桥柱。",
+      "body_pinyin": "hēi bái wú cháng de gù shì ， shuō de qí shí bú shì guǐ 。 tā shuō de shì “ wú cháng ”—— wàn wù jiē biàn ， zhōng yǒu jǐn shí 。 liǎng wèi xiōng dì tí xǐng wǒ men ： zài zhè ge bù duàn biàn huà de shì jiè lǐ ， yǒu xiē dōng xī réng rán kě yǐ jiān shǒu —— yī jù chéng nuò 、 yī fèn qíng yì 、 yī cì xiàng shàn de xuǎn zé 。 shǒu hǎo nǐ de chéng nuò 。 dāng hé shuǐ shàng zhǎng shí ， bào jǐn nà gēn qiáo zhù 。",
+      "alt_en": "Impermanence",
+      "alt_zh": "无常"
+    }
+  ]
+}

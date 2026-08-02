@@ -1,0 +1,1314 @@
+/* ═══════════════════════════════════════════
+   INK DESIGN SYSTEM — Components
+   墨韵设计系统 · 组件
+   ═══════════════════════════════════════════ */
+
+/* =============================================
+   1. BUTTONS — Square ink outline, hover invert
+   ============================================= */
+
+.ink-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.8rem;
+  border: 1px solid var(--ink-border);
+  background: var(--ink-bg);
+  color: var(--ink-fg);
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+  font-weight: 500;
+}
+
+.ink-btn:hover { background: var(--ink-fg); color: var(--ink-bg); }
+
+.ink-btn--primary { background: var(--ink-fg); color: var(--ink-bg); }
+.ink-btn--primary:hover { background: var(--ink-bg); color: var(--ink-fg); }
+
+.ink-btn--sm { padding: 0.5rem 1rem; font-size: 0.72rem; }
+.ink-btn--lg { padding: 1.25rem 2.2rem; font-size: 0.95rem; }
+
+.ink-btn:disabled,
+.ink-btn--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* =============================================
+   2. SEALS — Signature chops
+   ============================================= */
+
+.ink-seal {
+  background: var(--ink-fg);
+  color: var(--ink-bg);
+  display: grid;
+  place-items: center;
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: 1.3rem;
+  width: 38px;
+  height: 38px;
+  box-shadow: var(--ink-shadow-sm);
+  transition: box-shadow 0.3s, background 0.6s, color 0.6s;
+}
+
+.ink-seal--sm { width: 32px; height: 32px; font-size: 1rem; }
+.ink-seal--md { width: 52px; height: 52px; font-size: 1.5rem; }
+.ink-seal--lg { width: 64px; height: 64px; font-size: 2rem; box-shadow: var(--ink-shadow-seal); }
+
+.ink-seal--inverted { background: var(--ink-bg); color: var(--ink-fg); border: 1px solid var(--ink-border); }
+
+.ink-seal:hover { box-shadow: var(--ink-shadow); }
+
+/* =============================================
+   3. CARDS — Hard shadow, grayscale imagery
+   ============================================= */
+
+.ink-card {
+  background: var(--ink-card);
+  border: 1px solid var(--ink-border);
+  padding: 2rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: var(--ink-shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.ink-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--ink-shadow-hover);
+}
+
+.ink-card__title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.ink-card__body {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.ink-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ink-border-soft);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.1em;
+}
+
+.ink-card__category {
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.6rem;
+}
+
+/* Card with full-bleed image */
+.ink-card--image { padding: 0; overflow: hidden; }
+.ink-card--image .ink-card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--ink-border);
+  filter: grayscale(100%) contrast(1.05) sepia(0.15);
+  transition: transform 0.6s;
+}
+
+[data-theme="dark"] .ink-card--image .ink-card__img {
+  filter: grayscale(100%) contrast(0.9) brightness(0.85);
+}
+
+.ink-card--image:hover .ink-card__img { transform: scale(1.06); }
+.ink-card--image .ink-card__content { padding: 1.5rem 2rem 2rem; display: flex; flex-direction: column; flex: 1; }
+
+/* Stat card */
+.ink-card__stat {
+  text-align: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--ink-border-soft);
+}
+
+.ink-card__stat:last-of-type { border-bottom: none; }
+
+.ink-card__stat-num {
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: 3rem;
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.ink-card__stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+/* =============================================
+   4. SECTION HEADER — Chinese numeral
+   ============================================= */
+
+.ink-section-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--ink-border);
+}
+
+@media (max-width: 768px) {
+  .ink-section-header { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+.ink-section-num {
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--ink-fg);
+  text-shadow: 3px 3px 0 var(--ink-7);
+}
+
+.ink-section-title-group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.ink-section-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.ink-section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.ink-section-desc {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  max-width: 320px;
+  text-align: right;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) { .ink-section-desc { text-align: left; } }
+
+/* =============================================
+   5. PILLS — Bordered square, hover invert
+   ============================================= */
+
+.ink-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--ink-border);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  background: var(--ink-bg);
+  color: var(--ink-fg);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+  user-select: none;
+}
+
+.ink-pill:hover { background: var(--ink-fg); color: var(--ink-bg); }
+.ink-pill.is-active { background: var(--ink-fg); color: var(--ink-bg); }
+.ink-pill--solid { background: var(--ink-fg); color: var(--ink-bg); }
+.ink-pill--solid:hover { background: var(--ink-bg); color: var(--ink-fg); }
+.ink-pill--outline { background: transparent; }
+.ink-pill--outline:hover { background: var(--ink-fg); color: var(--ink-bg); }
+
+.ink-pill__dot {
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  display: inline-block;
+}
+
+.ink-pill__close {
+  margin-left: 0.3rem;
+  opacity: 0.6;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* =============================================
+   6. ALERTS — Four ink treatments
+   ============================================= */
+
+.ink-alert {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--ink-border);
+  background: var(--ink-card);
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.ink-alert::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--ink-fg);
+}
+
+/* Distinct left-bar treatments */
+.ink-alert--info::before { background: var(--ink-5); width: 4px; }
+.ink-alert--success::before { background: var(--ink-fg); width: 6px; }
+.ink-alert--warning::before {
+  background: repeating-linear-gradient(180deg, var(--ink-fg) 0 4px, transparent 4px 8px);
+  width: 6px;
+}
+.ink-alert--error::before { background: var(--ink-fg); width: 8px; }
+
+.ink-alert__icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ink-border);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.ink-alert--success .ink-alert__icon,
+.ink-alert--error .ink-alert__icon {
+  background: var(--ink-fg);
+  color: var(--ink-bg);
+}
+
+.ink-alert__content { flex: 1; }
+
+.ink-alert__title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ink-alert__title small {
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+
+.ink-alert__msg {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+.ink-alert__dismiss {
+  background: none;
+  border: none;
+  color: var(--ink-subtle);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.125rem;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.ink-alert__dismiss:hover { color: var(--ink-fg); }
+
+/* =============================================
+   7. PROGRESS — Ink bar & circular
+   ============================================= */
+
+.ink-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ink-progress__head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.ink-progress__name { letter-spacing: 0.08em; }
+.ink-progress__value { font-family: monospace; color: var(--ink-muted); }
+
+.ink-progress__bar {
+  height: 8px;
+  background: var(--ink-7);
+  position: relative;
+  overflow: hidden;
+}
+
+.ink-progress__fill {
+  height: 100%;
+  background: var(--ink-fg);
+  position: relative;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ink-progress__bar--striped .ink-progress__fill {
+  background-image: linear-gradient(45deg, var(--ink-4) 25%, transparent 25%, transparent 50%, var(--ink-4) 50%, var(--ink-4) 75%, transparent 75%, transparent);
+  background-size: 8px 8px;
+  animation: ink-stripe 1s linear infinite;
+}
+
+[data-theme="dark"] .ink-progress__bar--striped .ink-progress__fill {
+  background-image: linear-gradient(45deg, var(--ink-6) 25%, transparent 25%, transparent 50%, var(--ink-6) 50%, var(--ink-6) 75%, transparent 75%, transparent);
+}
+
+/* Thin bar (player) */
+.ink-progress__bar--thin { height: 4px; }
+.ink-progress__bar--thin .ink-progress__fill::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: var(--ink-fg);
+}
+
+/* ─── Circular progress ─── */
+.ink-circular { text-align: center; }
+
+.ink-circular__wrap { position: relative; display: inline-block; }
+
+.ink-circular__svg {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+  margin-bottom: 0.5rem;
+}
+
+.ink-circular__svg circle { fill: none; stroke-width: 4; }
+
+.ink-circular__bg { stroke: var(--ink-7); }
+.ink-circular__fg { stroke: var(--ink-fg); stroke-linecap: square; transition: stroke-dashoffset 1.5s; }
+
+.ink-circular__label {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: 1.5rem;
+}
+
+.ink-circular small {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--ink-muted);
+  display: block;
+  margin-top: 0.3rem;
+}
+
+/* =============================================
+   8. TOGGLES — Square switch
+   ============================================= */
+
+.ink-toggle {
+  width: 52px;
+  height: 28px;
+  border: 1px solid var(--ink-border);
+  background: var(--ink-bg);
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
+
+.ink-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background: var(--ink-fg);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.ink-toggle.on { background: var(--ink-fg); }
+.ink-toggle.on::after { transform: translateX(24px); background: var(--ink-bg); }
+
+/* Toggle rows */
+.ink-toggle-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--ink-border-soft);
+}
+
+.ink-toggle-item:last-child { border-bottom: none; padding-bottom: 0; }
+.ink-toggle-item:first-child { padding-top: 0; }
+
+.ink-toggle-info { display: flex; flex-direction: column; gap: 0.25rem; }
+.ink-toggle-name { font-size: 0.95rem; font-weight: 500; }
+.ink-toggle-desc { font-size: 0.72rem; color: var(--ink-muted); }
+
+/* =============================================
+   9. MEDIA PLAYER
+   ============================================= */
+
+.ink-player {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  border: 1px solid var(--ink-border);
+  background: var(--ink-card);
+  box-shadow: 8px 8px 0 var(--ink-fg);
+}
+
+@media (max-width: 768px) {
+  .ink-player { grid-template-columns: 1fr; }
+}
+
+.ink-player__cover {
+  position: relative;
+  border-right: 1px solid var(--ink-border);
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .ink-player__cover { border-right: none; border-bottom: 1px solid var(--ink-border); }
+}
+
+.ink-player__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.05) sepia(0.15);
+}
+
+[data-theme="dark"] .ink-player__cover img {
+  filter: grayscale(100%) contrast(0.9) brightness(0.85);
+}
+
+.ink-player__cover-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(28, 26, 23, 0.85), transparent 50%);
+  color: #F9F6F0;
+}
+
+[data-theme="dark"] .ink-player__cover-overlay {
+  background: linear-gradient(to top, rgba(14, 14, 16, 0.9), transparent 50%);
+  color: #EAEAEA;
+}
+
+.ink-player__cover-overlay .ink-seal {
+  background: #F9F6F0;
+  color: #1C1A17;
+}
+
+[data-theme="dark"] .ink-player__cover-overlay .ink-seal {
+  background: #EAEAEA;
+  color: #121215;
+}
+
+.ink-player__cover-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+.ink-player__body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ink-player__track-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.ink-player__title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+.ink-player__artist {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.15em;
+}
+
+.ink-player__like {
+  background: none;
+  border: 1px solid var(--ink-border);
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: var(--ink-fg);
+  transition: all 0.3s;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.ink-player__like:hover { background: var(--ink-fg); color: var(--ink-bg); }
+.ink-player__like.liked { background: var(--ink-fg); color: var(--ink-bg); }
+
+.ink-player__times {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  font-family: monospace;
+  letter-spacing: 0.1em;
+  margin-top: 0.5rem;
+}
+
+.ink-player__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.ink-player__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-fg);
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  transition: opacity 0.3s;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+}
+
+.ink-player__btn:hover { opacity: 0.55; }
+
+.ink-player__btn-main {
+  background: var(--ink-fg);
+  color: var(--ink-bg);
+  width: 56px;
+  height: 56px;
+  font-size: 1.3rem;
+  border: 1px solid var(--ink-border);
+}
+
+.ink-player__btn-main:hover { opacity: 0.85; }
+
+.ink-player__extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ink-border-soft);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ink-player__volume { display: flex; align-items: center; gap: 0.75rem; }
+
+.ink-volume-slider {
+  width: 100px;
+  height: 4px;
+  background: var(--ink-7);
+  position: relative;
+  cursor: pointer;
+}
+
+.ink-volume-fill { height: 100%; background: var(--ink-fg); width: 60%; transition: width 0.2s; }
+
+.ink-player__playlist { display: flex; gap: 0.5rem; }
+
+.ink-player__playlist-btn {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid var(--ink-border);
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  color: var(--ink-fg);
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.ink-player__playlist-btn.is-active { background: var(--ink-fg); color: var(--ink-bg); }
+
+/* =============================================
+   10. MENU — Vertical nav
+   ============================================= */
+
+.ink-menu {
+  border: 1px solid var(--ink-border);
+  background: var(--ink-card);
+  padding: 1rem 0;
+  box-shadow: var(--ink-shadow);
+  height: fit-content;
+}
+
+.ink-menu__header {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 0.5rem;
+}
+
+.ink-menu__item {
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  border-left: 2px solid transparent;
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  color: var(--ink-fg);
+}
+
+.ink-menu__item:hover {
+  background: var(--ink-bg-alt);
+  border-left-color: var(--ink-5);
+  padding-left: calc(1.5rem - 2px);
+}
+
+.ink-menu__item.is-active {
+  background: var(--ink-fg);
+  color: var(--ink-bg);
+  border-left-color: var(--ink-fg);
+}
+
+.ink-menu__item-left { display: flex; align-items: center; gap: 0.8rem; }
+.ink-menu__item i { font-size: 0.85rem; width: 16px; text-align: center; }
+
+.ink-menu__badge {
+  font-size: 0.62rem;
+  padding: 0.15rem 0.45rem;
+  background: var(--ink-fg);
+  color: var(--ink-bg);
+  font-family: monospace;
+  letter-spacing: 0;
+}
+
+.ink-menu__item.is-active .ink-menu__badge { background: var(--ink-bg); color: var(--ink-fg); }
+
+.ink-menu__divider {
+  height: 1px;
+  background: var(--ink-border-soft);
+  margin: 0.5rem 1.5rem;
+}
+
+/* Menu content panel */
+.ink-menu-content {
+  padding: 2.5rem;
+  border: 1px solid var(--ink-border);
+  background: var(--ink-card);
+  box-shadow: var(--ink-shadow);
+}
+
+.ink-menu-content h3 {
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.ink-menu-content__subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+}
+
+.ink-menu-content p {
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.ink-menu-content .ink-actions { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+
+/* =============================================
+   11. NAVIGATION
+   ============================================= */
+
+.ink-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--ink-bg);
+  border-bottom: 1px solid var(--ink-border);
+  transition: background 0.6s, border-color 0.6s;
+}
+
+.ink-nav__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.ink-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--ink-fg);
+}
+
+.ink-nav__logo:hover .ink-seal { box-shadow: var(--ink-shadow); }
+
+.ink-nav__logo-text { display: flex; flex-direction: column; line-height: 1; gap: 3px; }
+
+.ink-nav__logo-text small {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.ink-nav__links {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+@media (max-width: 1024px) { .ink-nav__links { display: none; } }
+
+.ink-nav__link {
+  color: var(--ink-fg);
+  text-decoration: none;
+  position: relative;
+  padding: 0.3rem 0;
+  transition: opacity 0.3s;
+}
+
+.ink-nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s;
+}
+
+.ink-nav__link:hover::after { width: 100%; }
+
+.ink-nav__actions { display: flex; align-items: center; gap: 1rem; }
+
+.ink-nav__mobile-btn {
+  display: flex;
+  color: var(--ink-fg);
+  background: none;
+  border: 1px solid var(--ink-border);
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@media (min-width: 1025px) { .ink-nav__mobile-btn { display: none; } }
+
+/* Mobile menu */
+.ink-nav-mobile {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: var(--ink-bg);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+.ink-nav-mobile.is-open { display: flex; }
+
+.ink-nav-mobile__link {
+  font-size: 1.5rem;
+  font-family: 'Ma Shan Zheng', serif;
+  color: var(--ink-fg);
+  letter-spacing: 0.15em;
+}
+
+/* =============================================
+   12. HERO — Negative space + seal
+   ============================================= */
+
+.ink-hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  padding: 8rem 2rem 4rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ink-border);
+}
+
+@media (max-width: 768px) { .ink-hero { padding: 7rem 1.5rem 5rem; } }
+
+.ink-hero__inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+  gap: 2rem;
+  align-items: end;
+}
+
+@media (max-width: 768px) { .ink-hero__inner { grid-template-columns: 1fr; } }
+
+.ink-hero__vertical {
+  writing-mode: vertical-rl;
+  font-size: 0.72rem;
+  letter-spacing: 0.6em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding-top: 1rem;
+  border-top: 1px solid var(--ink-border);
+  height: fit-content;
+  font-family: 'Noto Serif SC', serif;
+  align-self: end;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) { .ink-hero__vertical { display: none; } }
+
+.ink-hero__main { align-self: end; padding-bottom: 4rem; }
+
+.ink-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 2rem;
+}
+
+.ink-hero__tag::before {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 1px;
+  background: var(--ink-fg);
+}
+
+.ink-hero__title {
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: clamp(5rem, 14vw, 13rem);
+  line-height: 0.85;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.ink-hero__title span { display: inline-block; margin-right: 0.5rem; }
+
+.ink-hero__title-sub {
+  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  margin-bottom: 2rem;
+  color: var(--ink-muted);
+}
+
+.ink-hero__subtitle {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  max-width: 460px;
+  color: var(--ink-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.ink-hero__cta { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+
+.ink-hero__blank {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 768px) { .ink-hero__blank { display: none; } }
+
+.ink-hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 3;
+}
+
+.ink-hero__scroll::after {
+  content: '';
+  width: 1px;
+  height: 40px;
+  background: var(--ink-fg);
+  animation: ink-scroll-pulse 2s ease-in-out infinite;
+  transform-origin: top;
+}
+
+/* =============================================
+   13. QUOTE — Giant background character
+   ============================================= */
+
+.ink-quote-section {
+  padding: 10rem 2rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid var(--ink-border);
+  overflow: hidden;
+}
+
+.ink-quote-bg {
+  position: absolute;
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: 32rem;
+  line-height: 1;
+  color: var(--ink-fg);
+  opacity: 0.06;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.ink-quote-content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.ink-quote-mark {
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.ink-quote-text {
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.ink-quote-translation {
+  font-family: 'Noto Serif SC', serif;
+  color: var(--ink-muted);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.ink-quote-attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.ink-quote-attribution::before,
+.ink-quote-attribution::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--ink-fg);
+}
+
+/* =============================================
+   14. FOOTER
+   ============================================= */
+
+.ink-footer {
+  padding: 5rem 2rem 2rem;
+  background: var(--ink-bg-alt);
+  border-top: 1px solid var(--ink-border);
+  position: relative;
+}
+
+.ink-footer__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ink-footer__top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--ink-border);
+}
+
+@media (max-width: 768px) { .ink-footer__top { grid-template-columns: 1fr; } }
+
+.ink-footer__brand { display: flex; flex-direction: column; gap: 1rem; }
+.ink-footer__brand .ink-nav__logo { font-size: 2rem; }
+.ink-footer__brand p {
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.ink-footer__col h5 {
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+}
+
+.ink-footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+
+.ink-footer__col a {
+  color: var(--ink-fg);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.3s;
+}
+
+.ink-footer__col a:hover { opacity: 0.55; }
+
+.ink-footer__bottom {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.15em;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ink-footer__social { display: flex; gap: 0.5rem; }
+
+.ink-footer__social a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--ink-border);
+  display: grid;
+  place-items: center;
+  color: var(--ink-fg);
+  transition: all 0.3s;
+}
+
+.ink-footer__social a:hover { background: var(--ink-fg); color: var(--ink-bg); }
+
+/* =============================================
+   15. TYPOGRAPHY GRID
+   ============================================= */
+
+.ink-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--ink-border);
+  background: var(--ink-card);
+}
+
+@media (max-width: 768px) { .ink-type-grid { grid-template-columns: 1fr; } }
+
+.ink-type-cell {
+  padding: 2.5rem;
+  border-right: 1px solid var(--ink-border);
+  border-bottom: 1px solid var(--ink-border);
+  position: relative;
+  transition: background 0.3s;
+}
+
+.ink-type-cell:hover { background: var(--ink-bg-alt); }
+.ink-type-cell:nth-child(2n) { border-right: none; }
+.ink-type-cell:nth-last-child(-n+2) { border-bottom: none; }
+
+@media (max-width: 768px) {
+  .ink-type-cell { border-right: none; }
+  .ink-type-cell:nth-last-child(-n+2) { border-bottom: 1px solid var(--ink-border); }
+  .ink-type-cell:last-child { border-bottom: none; }
+}
+
+.ink-type-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ink-type-display { font-family: 'Ma Shan Zheng', serif; font-size: 5rem; line-height: 1; }
+.ink-type-h1 { font-family: 'Noto Serif SC', serif; font-size: 2.4rem; font-weight: 700; line-height: 1.2; }
+.ink-type-h2 { font-family: 'Noto Serif SC', serif; font-size: 1.7rem; font-weight: 600; line-height: 1.3; }
+.ink-type-body { font-size: 1rem; line-height: 1.75; }
+
+/* =============================================
+   16. PALETTE BAR
+   ============================================= */
+
+.ink-palette-bar {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  height: 220px;
+  border: 1px solid var(--ink-border);
+  margin-bottom: 3rem;
+  background: var(--ink-card);
+}
+
+@media (max-width: 768px) {
+  .ink-palette-bar { grid-template-columns: repeat(5, 1fr); height: auto; }
+}
+
+.ink-palette-swatch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem 0.6rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-right: 1px solid var(--ink-border-soft);
+}
+
+.ink-palette-swatch:last-child { border-right: none; }
+.ink-palette-swatch:hover { transform: translateY(-10px); }
+
+@media (max-width: 768px) {
+  .ink-palette-swatch { height: 100px; }
+  .ink-palette-swatch:nth-child(5) { border-right: none; }
+}
+
+.ink-palette-swatch .ink-palette-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  font-family: monospace;
+}
+
+.ink-palette-swatch .ink-palette-name {
+  font-size: 0.72rem;
+  margin-top: 0.25rem;
+  font-family: 'Noto Serif SC', serif;
+}
+
+/* =============================================
+   17. CONTROL BLOCK — Bordered section
+   ============================================= */
+
+.ink-control-block {
+  border: 1px solid var(--ink-border);
+  padding: 2rem;
+  box-shadow: var(--ink-shadow);
+  background: var(--ink-card);
+}
+
+.ink-control-block__title {
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ink-border-soft);
+  display: flex;
+  justify-content: space-between;
+}

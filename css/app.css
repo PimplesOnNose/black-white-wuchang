@@ -1,0 +1,320 @@
+/* ═══════════════════════════════════════════════════════════
+   黑白无常 · The Impermanence — App styles
+   Built on the Ink Line (墨韵) design system.
+   Adapted for a sombre ghost-tale mood: dark-first, generous
+   white space, long-form narrative pages.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --bww-img-tint: grayscale(100%) contrast(1.06) brightness(0.96);
+  --bww-gutter: clamp(1.25rem, 4vw, 3rem);
+  --bww-pinyin-opacity: 0.72;
+  --bww-maxw: 880px;
+}
+
+/* Softer paper grain so illustrations read clearly */
+:root { --ink-grain-opacity: 0.04; }
+
+/* ─── Nav ──────────────────────────────────────────────────── */
+.bww-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+  border-bottom: 1px solid var(--ink-border-soft);
+  background: var(--ink-bg);
+}
+
+.bww-nav .ink-nav__inner {
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bww-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--ink-fg);
+}
+
+.bww-logo__seal { font-size: 0.9rem; }
+
+.bww-logo__zh {
+  font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  display: block;
+}
+
+.bww-logo__en {
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  color: var(--ink-muted);
+}
+
+.bww-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* ─── Language toggle ──────────────────────────────────────── */
+.bww-lang-toggle {
+  display: inline-flex;
+  border: 1px solid var(--ink-border);
+  box-shadow: var(--ink-shadow-sm);
+}
+
+.bww-lang-btn {
+  background: transparent;
+  color: var(--ink-fg);
+  border: 0;
+  padding: 0.4rem 0.85rem;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.bww-lang-btn + .bww-lang-btn { border-left: 1px solid var(--ink-border); }
+
+.bww-lang-btn.is-active {
+  background: var(--ink-fg);
+  color: var(--ink-bg);
+}
+
+/* ─── Autoplay ─────────────────────────────────────────────── */
+.bww-autoplay-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  border: 1px solid var(--ink-border-soft);
+  color: var(--ink-muted);
+  padding: 0.4rem 0.75rem;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bww-autoplay-btn.is-on {
+  color: var(--ink-fg);
+  border-color: var(--ink-border);
+  box-shadow: var(--ink-shadow-sm);
+}
+
+.bww-autoplay-icon { font-size: 0.9rem; }
+
+/* ─── Progress ribbon ──────────────────────────────────────── */
+.bww-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--ink-border-soft);
+  z-index: 90;
+}
+
+.bww-progress__fill {
+  height: 100%;
+  background: var(--ink-fg);
+  transition: width 0.4s ease;
+}
+
+/* ─── Stage ────────────────────────────────────────────────── */
+.bww-stage {
+  max-width: var(--bww-maxw);
+  margin: 0 auto;
+  padding: calc(var(--bww-gutter) + 4.5rem) var(--bww-gutter) 7.5rem;
+}
+
+/* ─── Story page ───────────────────────────────────────────── */
+.bww-page {
+  animation: ink-bloom 0.55s ease-out;
+}
+
+.bww-page[hidden] { display: none !important; }
+
+.bww-page__image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--ink-border);
+  box-shadow: var(--ink-shadow-lg);
+  overflow: hidden;
+  background: var(--ink-card);
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.bww-page__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: var(--bww-img-tint);
+  display: block;
+}
+
+.bww-page__text {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* ─── Section header ───────────────────────────────────────── */
+.bww-page .ink-section-header {
+  margin-bottom: 1.5rem;
+}
+
+.bww-page .ink-section-title {
+  font-family: 'Noto Serif SC', 'Ma Shan Zheng', serif;
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.bww-page[data-lang-active="zh"] .ink-section-title {
+  font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif;
+  font-weight: 400;
+}
+
+/* ─── Body ─────────────────────────────────────────────────── */
+.bww-body {
+  font-family: 'Noto Serif SC', serif;
+  line-height: 1.95;
+  font-size: clamp(1.02rem, 1.9vw, 1.22rem);
+  color: var(--ink-fg);
+}
+
+.bww-body--zh {
+  letter-spacing: 0.05em;
+}
+
+.bww-body + .bww-body--zh { margin-top: 1.1rem; }
+
+/* ─── Pinyin — a separate block, never ruby ────────────────── */
+.bww-pinyin {
+  font-family: 'Noto Serif SC', serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink-muted);
+  opacity: var(--bww-pinyin-opacity);
+  letter-spacing: 0.16em;
+  line-height: 2.05;
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--ink-border-soft);
+  font-size: clamp(0.92rem, 1.6vw, 1.08rem);
+  word-break: break-word;
+}
+
+/* ─── Landing & Epilogue ───────────────────────────────────── */
+.bww-page[data-page-id="00"] .bww-page__text,
+.bww-page[data-page-id="10"] .bww-page__text {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.bww-page[data-page-id="00"] .ink-section-header,
+.bww-page[data-page-id="10"] .ink-section-header {
+  justify-content: center;
+  text-align: center;
+}
+
+.bww-page[data-page-id="00"] .ink-section-title,
+.bww-page[data-page-id="10"] .ink-section-title {
+  font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.bww-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: center;
+  margin-top: 2.2rem;
+}
+
+.bww-hero-actions .ink-btn {
+  font-size: 1.05rem;
+  padding: 0.8rem 1.6rem;
+}
+
+.bww-hero-note {
+  margin-top: 1.4rem;
+  font-size: 0.85rem;
+  color: var(--ink-subtle);
+  letter-spacing: 0.12em;
+}
+
+/* Autoplay checkbox on landing — autoplay lives in the top nav */
+
+/* ─── Controls bar ─────────────────────────────────────────── */
+.bww-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 0.7rem 1.5rem calc(0.7rem + env(safe-area-inset-bottom));
+  background: var(--ink-bg);
+  border-top: 1px solid var(--ink-border);
+  z-index: 70;
+}
+
+.bww-controls .ink-btn { cursor: pointer; }
+
+.bww-play-btn {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.bww-play-icon { font-family: inherit; }
+
+.bww-page-marker {
+  font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif;
+  color: var(--ink-muted);
+  min-width: 4.5rem;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+/* ─── Audio element is invisible; driven by buttons ────────── */
+.bww-audio { display: none; }
+
+/* ─── Ink-bloom page transition ────────────────────────────── */
+@keyframes ink-bloom {
+  from { opacity: 0; filter: blur(8px); transform: translateY(6px); }
+  to   { opacity: 1; filter: blur(0);   transform: translateY(0); }
+}
+
+/* ─── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .bww-page { animation: none; }
+  .bww-progress__fill { transition: none; }
+}
+
+/* ─── Small screens ────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .bww-logo__zh { font-size: 1rem; }
+  .bww-autoplay-label { display: none; }
+  .bww-autoplay-btn { padding: 0.4rem 0.55rem; }
+  .bww-controls { gap: 0.55rem; }
+  .bww-page__image-wrap { box-shadow: var(--ink-shadow); }
+}
