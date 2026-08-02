@@ -145,6 +145,15 @@
       text.appendChild(actions);
     }
 
+    /* Crafted-by credit on the landing page */
+    if (pg.id === '00') {
+      const credit = document.createElement('p');
+      credit.className = 'bww-credit';
+      credit.setAttribute('lang', 'en');
+      credit.innerHTML = 'Crafted with \u{1F916} <a href="https://pi.dev" target="_blank" rel="noopener">Pi</a> and <a href="https://deepseek.com" target="_blank" rel="noopener">Deepseek</a>';
+      text.appendChild(credit);
+    }
+
     return sec;
   }
 

@@ -247,6 +247,27 @@
   padding: 0.8rem 1.6rem;
 }
 
+/* ─── Crafted-by credit ────────────────────────────────────── */
+.bww-credit {
+  margin-top: 2.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--ink-border-soft);
+  font-size: 0.85rem;
+  color: var(--ink-subtle);
+  letter-spacing: 0.06em;
+}
+
+.bww-credit a {
+  color: var(--ink-fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--ink-border);
+}
+
+.bww-credit a:hover {
+  color: var(--ink-accent, var(--ink-fg));
+}
+
 .bww-hero-note {
   margin-top: 1.4rem;
   font-size: 0.85rem;

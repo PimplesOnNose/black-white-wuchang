@@ -94,7 +94,7 @@ directly as `index.html` over `file://`.
 | Layer | Choice |
 |-------|--------|
 | Frontend | HTML + CSS + vanilla JS (no framework) |
-| Design system | [Ink Line (墨韵)](https://github.com/) — adapted for the story mood |
+| Design system | Ink Line (墨韵) — adapted for the story mood |
 | Illustrations | Cloudflare Workers AI (FLUX schnell), 1024×576 |
 | Narration | Microsoft Edge TTS via `edge-tts` |
 | Pinyin | `pypinyin` (tone marks) |
